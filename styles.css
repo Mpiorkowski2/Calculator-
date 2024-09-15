@@ -17,35 +17,64 @@
 
 .all{
     border: 4px solid black;
-    padding: 30px;
-    
+    padding: 10px;
+    background-color: rgb(60, 60, 60);
     display: flex;
     flex-direction: column;
     justify-content:space-between;
-
     width: 400px;
-    height: 610px;
-    
+    height: 580px;
 }
 
 .text-box{
     size: 40px;
-    border: solid saddlebrown 4px;
+    border: solid rgb(0, 0, 0) 4px;
     font-size: 60px;
     justify-content: flex-end;
     display: flex;
-    
+    padding: 10px;
+    background-color: rgb(135, 131, 131);
     
 }
-
 .one, .two, .three, .four, .five{
     display: flex;
     justify-content: space-between;
+    border: 3px;
 
+}
+
+.buttts{
+    background-color: black;
 }
 button{
     flex: 1;
     font-size: 40px;
     min-width: 80px;
     min-height: 80px;
+    border: solid rgb(0, 0, 0) 1px;
+    border-radius: 4px;
+    cursor: pointer;
+    
+}
+
+
+.green{
+background-color: rgb(89, 193, 89);
+}
+.green:hover{
+    background-color: rgb(51, 109, 51);
+}
+
+.orange{
+    background-color: rgb(245, 170, 31);
+}
+.orange:hover{
+    background-color: rgb(177, 124, 26);
+}
+
+.babyblue{
+    background-color: rgb(61, 107, 255);
+}
+.babyblue:hover{
+    background-color: rgb(33, 59, 143);
 }
