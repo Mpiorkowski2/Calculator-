@@ -11,6 +11,7 @@ window.addEventListener('keydown', function(e){
     key.click();
 });
 
+
 function updateText(){
     const display = document.getElementById('text-box');
    display.innerText = displayVal
@@ -52,7 +53,7 @@ function clickButton() {
 }
 clickButton();
 
-function inputNum(num){
+function inputNum(num){  
     if (firstNum === null){
         if(displayVal === '0' || displayVal ===0){
             //1st click - handles first num input
@@ -160,6 +161,7 @@ function clearDisplay(){
     firstAction = null;
     secondAction = null;
     result = null;
+    updateText();
 }
 
 function inputBackspace(){
@@ -168,6 +170,7 @@ function inputBackspace(){
         updateText();
     }
 }
+
 
 function operate(x, y, op){
     if(op === '+') {
@@ -188,3 +191,23 @@ function operate(x, y, op){
 function roundAccurately(num, places) {
     return parseFloat(Math.round(num + 'e' + places) + 'e-' + places);
 }
+
+function backspace() {
+    if (displayVal.length > 1) {
+        displayVal = displayVal.slice(0, -1);
+    } else {
+        displayVal = '0';
+    }
+    updateText();
+}
+
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Backspace') {
+        backspace();
+    } else if (event.key === 'Delete') {
+        clearDisplay();
+    } else {
+        const key = document.querySelector(`button[data-key='${event.key}']`);
+        if (key) key.click();
+    }
+});
