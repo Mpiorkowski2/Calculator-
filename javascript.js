@@ -19,7 +19,7 @@ function updateText(){
    }
 }
 
-updateText();
+updateText(); 
 
 function clickButton() {
     for (let i =0; i < buttons.length; i++) {
@@ -144,9 +144,14 @@ function inputPercentage(){
     displayVal = (parseFloat(displayVal)/100).toString();
 }
 
-function inputSign(num){
-    displayVal = (num * -1).toString();
+function inputSign() {
+    if (displayVal === 'NaN' || displayVal === '0') {
+        displayVal = '0'; // Reset to zero if NaN or zero
+    } else {
+        displayVal = (parseFloat(displayVal) * -1).toString();
+    }
 }
+
 
 function clearDisplay(){
     displayVal = '0';

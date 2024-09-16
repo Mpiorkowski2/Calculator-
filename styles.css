@@ -35,7 +35,8 @@
     padding: 10px;
     background-color: rgb(135, 131, 131);
     min-height: 100px;
-    
+    font-family: monospace;
+    text-shadow:1.5px 1.5px #383838;
 }
 .one, .two, .three, .four, .five{
     display: flex;
@@ -49,21 +50,38 @@
 }
 button{
     flex: 1;
-    font-size: 40px;
+    font-size: 25px;
     min-width: 80px;
     min-height: 80px;
     border: solid rgb(0, 0, 0) 1px;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
     
 }
 
 
-.green{
-background-color: rgb(89, 193, 89);
+.green {
+    background-color: rgb(105, 164, 105);
 }
-.green:hover{
+
+.green:hover {
     background-color: rgb(51, 109, 51);
+}
+
+.green:active {
+    animation: blink-animation-green 0.3s;
+}
+
+@keyframes blink-animation-green {
+    0% {
+        background-color: rgb(105, 164, 105);
+    }
+    50% {
+        background-color: rgb(51, 109, 51);
+    }
+    100% {
+        background-color: rgb(105, 164, 105);
+    }
 }
 
 .orange{
@@ -72,10 +90,39 @@ background-color: rgb(89, 193, 89);
 .orange:hover{
     background-color: rgb(177, 124, 26);
 }
+.orange:active {
+    animation: blink-animation-orange 0.3s;
+}
+@keyframes blink-animation-orange {
+    0% {
+        background-color: rgb(245, 170, 31);
+    }
+    50% {
+        background-color:  rgb(177, 124, 26);
+    }
+    100% {
+        background-color: rgb(245, 170, 31);
+    }
+}
+
 
 .babyblue{
     background-color: rgb(61, 107, 255);
 }
 .babyblue:hover{
     background-color: rgb(33, 59, 143);
+}
+.babyblue:active {
+    animation: blink-animation-babyblue 0.3s;
+}
+@keyframes blink-animation-babyblue {
+    0% {
+        background-color: rgb(61, 107, 255);
+    }
+    50% {
+        background-color:  rgb(33, 59, 143);
+    }
+    100% {
+        background-color:  rgb(61, 107, 255);
+    }
 }
