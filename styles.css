@@ -26,7 +26,7 @@
     height: 580px;
 }
 
-.text-box{
+#text-box{
     size: 40px;
     border: solid rgb(0, 0, 0) 4px;
     font-size: 60px;
@@ -34,6 +34,7 @@
     display: flex;
     padding: 10px;
     background-color: rgb(135, 131, 131);
+    min-height: 100px;
     
 }
 .one, .two, .three, .four, .five{
