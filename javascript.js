@@ -196,10 +196,14 @@ function backspace() {
     if (displayVal.length > 1) {
         displayVal = displayVal.slice(0, -1);
     } else {
-        displayVal = '0';
+        displayVal = '';
     }
     updateText();
 }
+
+
+
+
 
 document.addEventListener('keydown', function(event) {
     if (event.key === 'Backspace') {
